@@ -1,0 +1,16 @@
+<h3>List Of Task</h3>
+<table align="center">
+    <tr>
+        <th>Id</th>
+        <th>Task Name</th>
+        <th>Time</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let l of list">
+        <td>{{l.id}}</td>
+        <td>{{l.name}}</td>
+        <td>{{l.time}}</td>
+        <td></td>
+    </tr>
+    <button type="submit" [routerLink]="['/edit/']">Edit</button><button type="submit" [routerLink]="['/add/']">Add</button>
+</table>

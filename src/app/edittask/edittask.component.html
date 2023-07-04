@@ -1,0 +1,14 @@
+<h3>Edit Task</h3>
+
+<form action="" [formGroup]="editTask">
+    <label for="">Id</label><br>
+    <input type="text" name="id" formControlName="id" id="">
+    <span *ngIf="editTask.get('id')?.invalid && editTask.get('id')?.touched"></span><br><br>
+    <label for="">Name of task</label><br>
+    <input type="text" name="name" formControlName="name" id="">
+    <span *ngIf="editTask.get('name')?.invalid && editTask.get('name')?.touched"></span><br><br>
+    <label for="">Time for Task</label><br>
+    <input type="text" name="time" formControlName="time" id=""><br><br>
+    <span *ngIf="editTask.get('time')?.invalid && editTask.get('time')?.touched"></span>
+    <button (click)="UpdateData()">Update</button>
+</form>

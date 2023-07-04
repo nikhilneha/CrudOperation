@@ -1,0 +1,14 @@
+<h3>Add New Task</h3>
+
+<form action="" [formGroup]="newTask">
+    <label for="">Id</label><br>
+    <input type="text" name="id" formControlName="id" id="">
+    <span *ngIf="newTask.get('id')?.invalid && newTask.get('id')?.touched"></span><br><br>
+    <label for="">Name of task</label><br>
+    <input type="text" name="name" formControlName="name" id="">
+    <span *ngIf="newTask.get('name')?.invalid && newTask.get('name')?.touched"></span><br><br>
+    <label for="">Time for Task</label><br>
+    <input type="text" name="time" formControlName="time" id=""><br><br>
+    <span *ngIf="newTask.get('time')?.invalid && newTask.get('time')?.touched"></span>
+    <button type="submit" (click)="saveData()">Submit</button>
+</form>
